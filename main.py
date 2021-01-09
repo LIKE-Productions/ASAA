@@ -2,9 +2,9 @@ from collections import Counter
 import math
 from playsound import playsound
 
-bad = playsound('/home/magnus/GitHub/ASAA/Sounds/bad.wav')
-okay = playsound('/home/magnus/GitHub/ASAA/Sounds/okay.wav')
-good = playsound('/home/magnus/GitHub/ASAA/Sounds/good.wav')
+bad = playsound('Sounds/bad.wav')
+okay = playsound('Sounds/okay.wav')
+good = playsound('Sounds/good.wav')
 
 left_right = [(26, 22), (26, 22), (28, 20), (30, 24), (28, 24), (28, 24)]
 # Counted with 60 frames
