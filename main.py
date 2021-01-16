@@ -1,20 +1,14 @@
 from collections import Counter
 import math
-from typing import Collection
-from pydub import AudioSegment
-import spow
 import pymongo
+import pprint
 
-client = pymongo.MongoClient(
-    "mongodb+srv://Magnus-Peters-Munzo:vB0$12!G!WAi@asaafun.zjiyv.mongodb.net/ASAAfun?retryWrites=true&w=majority")
-db = client.asaa
+client = pymongo.MongoClient("mongodb+srv://Magnus-Peters-Munzo:Magnus2008!@cluster0.edcxs.mongodb.net/LIKE?retryWrites=true&w=majority")
+db = client.LIKE
 asaa = db.asaa
 
 
 # Sound Variables
-good = AudioSegment.from_wav("/home/magnus/GitHub/ASAA/Sounds/good.wav")
-okay = AudioSegment.from_wav("/home/magnus/GitHub/ASAA/Sounds/okay.wav")
-bad = AudioSegment.from_wav("/home/magnus/GitHub/ASAA/Sounds/bad.wav")
 # DB Variables
 aleft = []
 aright = []
@@ -28,11 +22,12 @@ dbleft = {}
 dbright = {}
 
 
-left_right = int(input("Are you left handed or right handed? 0 for left, 1 for right(-1 to end): "))
+left_right = int(input("Are you left handed or right handed? 0 for left, 1 for right: "))
 
 if left_right == 0:
     left_right = 0
     print("Times should be posted in 60 fps. To convert 30 fps to 60 fps, take your number and multiply it by two.")
+    
     while True:
         left = int(input(
             "Name one throwing time you have. When you have entered in all your times, type in 0: "))
@@ -40,27 +35,39 @@ if left_right == 0:
 
         if left == 0:
             False
+            aleft.pop(-1)
             dbleft = {
                 "handiness": "left",
                 "numbers": aleft
             }
             break
+    left_id = asaa.insert_one(dbleft).inserted_id
+
+
+
+
+
+
+
+
+
 elif left_right == 1:
     left_right = 1
+    print("Times should be posted in 60 fps. To convert 30 fps to 60 fps, take your number and multiply it by two.")
+    
     while True:
-        print("Times should be posted in 60 fps. To convert 30 fps to 60 fps, take your number and multiply it by two.")
-        right = float(input(
+        right = int(input(
             "Name one throwing time you have. When you have entered in all your times, type in 0: "))
         aright.append(right)
         if right == 0:
+            aright.pop(-1)
             False
             dbright = {
                 "handiness": "right",
                 "numbers": aright
             }
-        break
+            break
+    right_id = asaa.insert_one(dbright).inserted_id
 else:
     pass
 
-left_id = asaa.insert_one(dbleft).inserted_id
-right_id = asaa.insert_one(dbright).inserted_id
