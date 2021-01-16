@@ -26,7 +26,7 @@ I am happy to announce that we are finally releasing ASAA Version 0.1 Alpha 1. T
 Our first big change is the programming language we are using. I have decided on Python since it has a huge Data Science base.
 
 ## Dependencies
-The only dependencies you need to download yourself is PyMongo. Note that the password shown in the code is not my account password, and I also have two factor authentication enabled (unlike a certain CEO).
+The only dependencies you need to download yourself is PyMongo.
 
 # Conclusion
 To conclude this Version, better known as 0.1.1, we have finally created our promised ASAA. I hope to do the changes that were listed in the [What's Next](/Changelog/V0.1A.md#What's-Next) section.
