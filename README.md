@@ -11,25 +11,28 @@ This is the place where I explain the development process.
 
 ## Versions:
 
-**January 9, 2021**: *Release 1.0 Alpha One*
+**January 9, 2021**: *Release 0.1 Alpha One*
+
+**February 19, 2020**: *Release 0.2* 
+
 
 >For full information on the changes, view the [Changelog](/Changelog)
 
-# [Changelog for ASAA Version 0.1 Alpha](/Changelog/V0.1A.md##Message)
+# [Changelog for ASAA Version 0.1 Alpha](/Changelog/V0.2.md##Message)
 
 >This is a snippet of the full Changelog. You can view the full Changelog by clicking above this notice on the header. 
 
-I am happy to announce that we are finally releasing ASAA Version 0.1 Alpha 1. This is the first public release of ASAA, and is a dream I have been trying to accomplish for quite some time now. Anyways, here is an overview of the changes I have made for ASAA Version 0.1 Alpha 1. 
+I am happy to announce that we are finally releasing ASAA Version 0.2. This is the third public release of ASAA, and is a dream I have been trying to accomplish for quite some time now. Anyways, here is an overview of the changes I have made for ASAA Version 0.2. 
 # Main Changes
 
 ## Overview
 Our first big change is the programming language we are using. I have decided on Python since it has a huge Data Science base.
 
 ## Dependencies
-The only dependencies you need to download yourself is PyMongo.
+The only dependencies you need to download yourself are PyMongo and Pandas.
 
 # Conclusion
-To conclude this Version, better known as 0.1.1, we have finally created our promised ASAA. I hope to do the changes that were listed in the [What's Next](/Changelog/V0.1A.md#What's-Next) section.
+To conclude this Version, better known as 0.1.1, we have finally created our promised ASAA. I hope to do the changes that were listed in the [What's Next](/Changelog/V0.2.md#What's-Next) section.
 
 Thank you for choosing ASAA,
 
