@@ -1,0 +1,5 @@
+Speed euation == (d)istance travelled / (t)ime elapsed
+Measurements: d - meters, t - seconds
+Convertion of milliseconds to seconds == ms / 1000
+
+milliseconds per frame == 16.67 ms/frame @ 60 fps

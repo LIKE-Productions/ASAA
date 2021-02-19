@@ -1,6 +1,3 @@
-
-
-
 '''
 This is the main.py file. ASAA is under the BSD 3-Clause License, 
 which states that no one can use my base code to create closed source copies. You also cannot
@@ -10,9 +7,9 @@ Nike aren't using my product for their gain.
 
 from collections import Counter
 import math
-from pydub import AudioSegment
 import pymongo
 import pprint
+import pandas as pd
 
 
 client = pymongo.MongoClient(
@@ -20,21 +17,19 @@ client = pymongo.MongoClient(
 db = client.LIKE
 asaa = db.asaa
 
+throwing_time = ""
 
-# Sound Variables
-# bad = AudioSegment.from_wav("Sounds/bad.wav")
-# okay = AudioSegment.from_wav("Sounds/okay.wav")
-# good= AudioSegment.from_wav("Sounds/good.wav")
-
-
-
-# Input 
+# Input
 dbvar = []
 left_right = ''
+
 dbobj = {}
+
+
 
 # left = [26, 26, 28, 30, 28, 28]
 # right = [22, 22, 20, 24, 24, 24]
+# Distance = 449 cm
 
 
 def author():
@@ -46,12 +41,12 @@ def questions(left_or_right):
     left_or_right = left_right
     print("Times should be posted in 60 fps. To convert 30 fps to 60 fps, take your number and multiply it by two.")
 
+    distance = float(input("What is the distance you threw your throws from? Use meters(to convert cm to m, divide by 100): "))
     while True:
-        throwing_time = int(input(
+        time = float(input(
             "Name one throwing time you have. When you have entered in all your times, type in 0: "))
-        dbvar.append(throwing_time)
-
-        if throwing_time == 0:
+        
+        if time == 0:
             False
             dbvar.pop(-1)
             dbobj = {
@@ -60,7 +55,13 @@ def questions(left_or_right):
                 "numbers": dbvar
             }
             break
+        else:
+            tcon = 16.67*time/1000
+            throwing_time = distance / tcon * 3.6
+        dbvar.append(throwing_time)
+
     lr_id = asaa.insert_one(dbobj).inserted_id
+
 
 def find_docs():
     for query in asaa.find({"author": auth}):
