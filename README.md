@@ -1,39 +1,61 @@
 # ASAA
 
 ## Description
-ASAA is a simple app that aims to create a shot accruacy program using a Microsoft Kinect and an optional projector.
+ASAA is my long awaited dream of creating an app that measures the speed of your baseball throw.
 
-## Language
-We are hoping to be able to use Python as our main language mainly because it is widely compatible with many devices. I am currently running the code on a Raspberry Pi.
+## Programming Language
+We will be using Python as our language for a few reasons.
 
-# Development process
-This is the place where I explain the development process.
+1. I am experienced in Python
+1. It works great on a Raspberry Pi
+1. Extensive library support for tools I need.
+1. Great Data Science userbase
+
+# Development
 
 ## Versions:
 
-**January 9, 2021**: *Release 0.1 Alpha One*
+- **January 15, 2021**: *Version 0.1*
+- **February 19, 2021**: *Version 0.2*
 
-**February 19, 2020**: *Release 0.2* 
+>For full information on the changes, view the [CHANGELOG](https://github.com/LIKE-Productions/ASAA/tree/main/Changelog)
 
+## Abbreiviated Changelog for ASAA Version 0.2
 
->For full information on the changes, view the [Changelog](/Changelog)
+>This is a snippet of the full Changelog. You can view the full Changelog by clicking [here](https://github.com/LIKE-Productions/ASAA/blob/main/Changelog/V0.2.md).
 
-# [Changelog for ASAA Version 0.1 Alpha](/Changelog/V0.2.md##Message)
+### Message
+Thank you for supporting me to get to this point. This release is 10x better than the first release. Everything is way more human readable, and databases are easier to access than ever. The code is way more DRY than the last release, and etectra etectra. Many changes were added, which requires a new "[How the program works](https://github.com/LIKE-Productions/ASAA/blob/main/Changelog/V0.2.md#how-the-program-works)" page.
 
->This is a snippet of the full Changelog. You can view the full Changelog by clicking above this notice on the header. 
+### Dependencies
+All you need is Pymongo, but stay tuned because you soon might need pandas.
 
-I am happy to announce that we are finally releasing ASAA Version 0.2. This is the third public release of ASAA, and is a dream I have been trying to accomplish for quite some time now. Anyways, here is an overview of the changes I have made for ASAA Version 0.2. 
-# Main Changes
+### How to run the program
+If you were wondering about how to run this program, note there are no parameters you must fill in; there are zero parameters, in fact.
 
-## Overview
-Our first big change is the programming language we are using. I have decided on Python since it has a huge Data Science base.
+```shell
+python main.py
+```
 
-## Dependencies
-The only dependencies you need to download yourself are PyMongo and Pandas.
+### What's Next
+I am working quite hard on the big update I am promising. For updates, go to my Twitter, which is [@YapperPm](https://twitter.com/YapperPm) by the way. The one minor update I might make is turning the speed calculation into a function to unclutter my code. I will also work on better explaining my app inside the Python script. Still no PyLance or pylint errors, however. :innocent:
 
-# Conclusion
-To conclude this Version, better known as 0.1.1, we have finally created our promised ASAA. I hope to do the changes that were listed in the [What's Next](/Changelog/V0.2.md#What's-Next) section.
+### Conclusion
+To conclude, this release is major, and a big change. However, it will not be the biggest. Stay tuned to the new release.
+
+# ¡¡Update!!
+I am currently working on new logos for the LIKE and ASAA brand. Updates will be on Twitter. Here are a few pictures.
+
+<img src="https://bn1301files.storage.live.com/y4mR9fIXu8qx6lTLwzkE_PhJN5vrJYbVECMA5Jcs1a-j878PtjMjYEQTm7p8FKcKYGdey51sOP5FuJ7RaEiObYozk1Uwe14A9kC7HlZB8Cun3eP4oS9nc4A-VmV8MQrN6vQcE8KYVgBXwyl-djw-tc6xbtW-GEoued5-aKVxqfip-GRn1pwiEwpXIbOacQumYMD?width=486&height=479&cropmode=none" width="243" height="239.5" alt="2D Football with LIKE logo on the nose.">
+
+###### 2D Football with LIKE logo on the nose. 
+
+<img src="https://bn1301files.storage.live.com/y4mT-mTTvkpzf4eaCUKwd8vGu0TYFrcy3zQvbd6BcD1B_vRmGU6yu6JXCLjsNkyK6x159F9AuG8r9efbhTsg6IO_DKm2GqZnF14llwU8hhdBLJFn5NUv6wVg6T0665Egwk5Zg1yko9wTWFLkiQAOT_IKuWX1TD8PaVbxR_wJqKwnW9jIwIj3ZLY-_gV7pYpLb8q?width=925&height=572&cropmode=none" width="500" height="300" alt="ASAA logo with A shooting S into the glove of A2, and A3 throwing a football." />
+
+###### ASAA logo with A shooting S into the glove of A2, and A3 throwing a football.
+
+Although I know these are not the best logos, I am working to create better logos in the future. 
 
 Thank you for choosing ASAA,
 
-Magnus Peterson Munoz, CEO of LIKE Productions and head engineer of ASAA.
+Magnus Peterson Munoz, President of NCSL and Head Engineer / CEO of LIKE Productions.
