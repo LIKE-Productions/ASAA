@@ -7,8 +7,6 @@ Nike aren't using my product for their gain.
 import pymongo
 import pandas as pd
 import pprint
-import pdb
-import csv
 import os
 import platform
 
@@ -29,7 +27,7 @@ throwing_time = ""
 dbobj = {}
 fi_in = 0
 
-# pdb.set_trace()
+
 
 
 class AsaaObj:
@@ -43,17 +41,17 @@ class AsaaObj:
         # sysname = platform.system()
         global count
         count = len([name for name in os.listdir(".") if os.path.isfile(name)])
-        wincd = "C:\\ASAA\\asaa_logs"
-        unixcd = "/usr/bin/asaa/asaa_logs"
+        wincd = "asaa_logs"
+        unixcd = "asaa_logs"
         if platform.system() == 'Windows' and not os.path.exists(wincd):
-            os.makedirs(wincd)
+            os.mkdir(wincd)
             os.chdir(wincd)
             count
         elif platform.system() == 'Windows' and os.path.exists(wincd):
             os.chdir(wincd)
             count
         elif platform.system() == 'Linux' and not os.path.exists(unixcd):
-            os.makedirs(unixcd)
+            os.mkdir(unixcd)
             os.chdir(unixcd)
             count
         else:
@@ -73,14 +71,7 @@ class AsaaObj:
                 "Name one throwing time you have. When you have entered in all your times, type in 0: "))
 
             if time == 0:
-                # dfobj = {
-                #     "author": auth,
-                #     "handiness": left_or_right,
-                #     "distance": distance,
-                #     "numbers": dbvar
-                # }
-
-
+                
                 dbobj = {
                     "author": auth,
                     "handiness": left_or_right,
@@ -90,7 +81,7 @@ class AsaaObj:
 
                 self.b_setup()
                 df = pd.DataFrame.from_dict(dbobj)
-                # pdb.set_trace()
+                
                 df.to_excel(f"thr_time{count}.xlsx", index=False)
                 print(df)
                 break
