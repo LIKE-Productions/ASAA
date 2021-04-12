@@ -25,17 +25,11 @@ dfvar = []
 left_right = ''
 throwing_time = ""
 dbobj = {}
-fi_in = 0
 
 
 
 
 class AsaaObj:
-
-        # Input
-    def author(self):
-        global auth
-        auth = input("What is your name?(Used for access purposes)\n")
 
     def b_setup(self):
         # sysname = platform.system()
@@ -59,6 +53,14 @@ class AsaaObj:
             count
 
         count = len([name for name in os.listdir(".") if os.path.isfile(name)])
+
+        def __init__(self):
+            pass
+        # Input
+    def author(self):
+        global auth
+        auth = input("What is your name?(Used for access purposes)\n")
+
 
 
 
@@ -98,14 +100,6 @@ class AsaaObj:
             
     
 asaaobj = AsaaObj()
-
-
-
-
-
-
-
-
 
 
 asaaobj.author()
